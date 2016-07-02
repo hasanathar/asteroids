@@ -420,7 +420,8 @@ Ship = function () {
       this.delayBeforeBullet -= delta;
     }
     if (KEY_STATUS.space) {
-      if (this.delayBeforeBullet <= 0) {
+      if (this.delayBeforeBullet <= 0){
+        this.delaybeforebullet = 10;
         for (var i = 0; i < this.bullets.length; i++) {
           if (!this.bullets[i].visible) {
             SFX.laser();
